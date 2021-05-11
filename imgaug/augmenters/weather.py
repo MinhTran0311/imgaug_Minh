@@ -663,7 +663,7 @@ class Fog(CloudLayer):
                 alpha_multiplier=0.3,
                 density_multiplier=(0.4, 0.9),
                 seed=None, name=None,
-                random_state="deprecated", deterministic="deprecated", test=True):
+                random_state="deprecated", deterministic="deprecated"):
         super(Fog, self).__init__(
             intensity_mean=intensity_mean,
             intensity_freq_exponent=(-2.0, -1.5),
@@ -675,8 +675,7 @@ class Fog(CloudLayer):
             sparsity=0.9,
             density_multiplier=density_multiplier,
             seed=seed, name=name,
-            random_state=random_state, deterministic=deterministic,
-            test=test)
+            random_state=random_state, deterministic=deterministic)
 
 
 # TODO add examples and add these to the overview docs
