@@ -1422,18 +1422,23 @@ class Rain(meta.SomeOf):
 
     # Added in 0.4.0.
     def __init__(self, nb_iterations=(1, 3),
+                 density=(0.03, 0.14),
+                 density_uniformity=(0.8, 1.0),
+                 drop_size_uniformity=(0.2, 0.5),
+                 angle=(-15, 15),
+                 blur_sigma_fraction=(0.001, 0.001),
                  drop_size=(0.01, 0.02),
                  speed=(0.04, 0.20),
                  seed=None, name=None,
                  random_state="deprecated", deterministic="deprecated"):
         layer = RainLayer(
-            density=(0.03, 0.14),
-            density_uniformity=(0.8, 1.0),
+            density=density,
+            density_uniformity=density_uniformity,
             drop_size=drop_size,
-            drop_size_uniformity=(0.2, 0.5),
-            angle=(-15, 15),
+            drop_size_uniformity=drop_size_uniformity,
+            angle=angle,
             speed=speed,
-            blur_sigma_fraction=(0.001, 0.001),
+            blur_sigma_fraction=blur_sigma_fraction),
             seed=seed,
             random_state=random_state,
             deterministic=deterministic
