@@ -1438,7 +1438,7 @@ class Rain(meta.SomeOf):
             drop_size_uniformity=drop_size_uniformity,
             angle=angle,
             speed=speed,
-            blur_sigma_fraction=blur_sigma_fraction),
+            blur_sigma_fraction=blur_sigma_fraction,
             seed=seed,
             random_state=random_state,
             deterministic=deterministic
